@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import videoData from '../data/videos.json';
+import { getAssetUrl } from '../utils/assetUtils';
 
 const WatchPage = () => {
     const { videoId } = useParams<{ videoId: string }>();
@@ -48,9 +49,9 @@ const WatchPage = () => {
                     controls
                     autoPlay
                     className="w-full h-full object-contain"
-                    poster={video.thumbnailUrl || undefined}
+                    poster={video.thumbnailUrl ? getAssetUrl(video.thumbnailUrl) : undefined}
                 >
-                    <source src={video.videoUrl} type="video/mp4" />
+                    <source src={getAssetUrl(video.videoUrl)} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -76,7 +77,7 @@ const WatchPage = () => {
                                 >
                                     <div className="aspect-video rounded-xl overflow-hidden relative mb-2" style={{ aspectRatio: '16/9' }}>
                                         {v.thumbnailUrl ? (
-                                            <img src={v.thumbnailUrl} alt={v.title} className="w-full h-full object-cover" style={{ borderRadius: '8px' }} />
+                                            <img src={getAssetUrl(v.thumbnailUrl)} alt={v.title} className="w-full h-full object-cover" style={{ borderRadius: '8px' }} />
                                         ) : (
                                             <div className="placeholder-video">
                                                 <span style={{ fontSize: '2rem' }}>🎬</span>
