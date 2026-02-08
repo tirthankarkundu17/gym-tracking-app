@@ -40,7 +40,7 @@ const VideoGridPage = () => {
                         onClick={() => navigate(`/watch/${video.id}`)}
                         style={{ padding: '1rem', cursor: 'pointer' }}
                     >
-                        <div style={{ position: 'relative', width: '100%', height: '220px', borderRadius: '8px', overflow: 'hidden', backgroundColor: '#0f172a' }}>
+                        <div style={{ position: 'relative', width: '100%', height: '220px', borderRadius: '8px', overflow: 'hidden', backgroundColor: 'var(--bg-surface)' }}>
                             {video.thumbnailUrl ? (
                                 <img
                                     src={video.thumbnailUrl}
@@ -60,7 +60,7 @@ const VideoGridPage = () => {
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    background: 'linear-gradient(45deg, #1e293b, #334155)'
+                                    background: 'var(--video-placeholder-bg)'
                                 }}>
                                     <span style={{ fontSize: '3rem', opacity: 0.5 }}>🎬</span>
                                 </div>
@@ -80,7 +80,7 @@ const VideoGridPage = () => {
             </div>
 
             {category.videos.length === 0 && (
-                <div style={{ textAlign: 'center', color: '#94a3b8', marginTop: '3rem' }}>
+                <div style={{ textAlign: 'center', color: 'var(--text-muted)', marginTop: '3rem' }}>
                     No videos available for this category yet.
                 </div>
             )}
