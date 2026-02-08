@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import videoData from '../data/videos.json';
+import { getAssetUrl } from '../utils/assetUtils';
 import { useEffect } from 'react';
 
 const VideoGridPage = () => {
@@ -43,7 +44,7 @@ const VideoGridPage = () => {
                         <div style={{ position: 'relative', width: '100%', height: '220px', borderRadius: '8px', overflow: 'hidden', backgroundColor: 'var(--bg-surface)' }}>
                             {video.thumbnailUrl ? (
                                 <img
-                                    src={video.thumbnailUrl}
+                                    src={getAssetUrl(video.thumbnailUrl)}
                                     alt={video.title}
                                     style={{
                                         width: '100%',

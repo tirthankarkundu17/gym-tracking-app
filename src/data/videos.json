@@ -4,13 +4,13 @@
       "id": "biceps-triceps",
       "name": "Biceps Triceps",
       "description": "Build massive arms with these targeted exercises.",
-      "image": "./thumbnails/biceps1.jpg",
+      "image": "thumbnails/biceps1.jpg",
       "videos": [
         {
           "id": "bt-1",
           "title": "Dumbbell Curls & Extensions",
-          "videoUrl": "./videos/BicepsTriceps/biceps-triceps-dumbell.mp4",
-          "thumbnailUrl": "./thumbnails/biceps1.jpg"
+          "videoUrl": "videos/BicepsTriceps/biceps-triceps-dumbell.mp4",
+          "thumbnailUrl": "thumbnails/biceps1.jpg"
         }
       ]
     },
@@ -18,12 +18,12 @@
       "id": "cardio",
       "name": "Cardio",
       "description": "Improve your endurance and burn calories.",
-      "image": "./thumbnails/shrugs.jpg", 
+      "image": "thumbnails/shrugs.jpg",
       "videos": [
         {
           "id": "c-1",
           "title": "Plank",
-          "videoUrl": "./videos/Cardio/Plank.mp4",
+          "videoUrl": "videos/Cardio/Plank.mp4",
           "thumbnailUrl": ""
         }
       ]
@@ -32,36 +32,36 @@
       "id": "chest",
       "name": "Chest",
       "description": "Develop a strong and well defined chest.",
-      "image": "./thumbnails/benchpress1.jpg",
+      "image": "thumbnails/benchpress1.jpg",
       "videos": [
         {
           "id": "ch-1",
           "title": "Bench Press",
-          "videoUrl": "./videos/Chest/BenchPress.mp4",
-          "thumbnailUrl": "./thumbnails/benchpress1.jpg"
+          "videoUrl": "videos/Chest/BenchPress.mp4",
+          "thumbnailUrl": "thumbnails/benchpress1.jpg"
         },
         {
           "id": "ch-2",
           "title": "Peck Fly",
-          "videoUrl": "./videos/Chest/Chest-PeckFly.mp4",
-          "thumbnailUrl": "./thumbnails/peckfly1.jpg"
+          "videoUrl": "videos/Chest/Chest-PeckFly.mp4",
+          "thumbnailUrl": "thumbnails/peckfly1.jpg"
         },
         {
           "id": "ch-3",
           "title": "Pushups Type 1",
-          "videoUrl": "./videos/Chest/Pushups.mp4",
-          "thumbnailUrl": "./thumbnails/pushups1.jpg"
+          "videoUrl": "videos/Chest/Pushups.mp4",
+          "thumbnailUrl": "thumbnails/pushups1.jpg"
         },
         {
           "id": "ch-4",
           "title": "Pushups Type 2",
-          "videoUrl": "./videos/Chest/Pushups2.mp4",
-          "thumbnailUrl": "./thumbnails/pushups2.jpg"
+          "videoUrl": "videos/Chest/Pushups2.mp4",
+          "thumbnailUrl": "thumbnails/pushups2.jpg"
         },
         {
           "id": "ch-5",
           "title": "Dumbbell Press",
-          "videoUrl": "./videos/Chest/chest-dumbell.mp4",
+          "videoUrl": "videos/Chest/chest-dumbell.mp4",
           "thumbnailUrl": ""
         }
       ]
@@ -70,37 +70,37 @@
       "id": "lats",
       "name": "Lats",
       "description": "Strengthen your back and improve posture.",
-      "image": "./thumbnails/lats1.jpg",
+      "image": "thumbnails/lats1.jpg",
       "videos": [
         {
           "id": "l-1",
           "title": "Dumbbell Row",
-          "videoUrl": "./videos/Lats/lats-dumbell.mp4",
-          "thumbnailUrl": "./thumbnails/lats1.jpg"
+          "videoUrl": "videos/Lats/lats-dumbell.mp4",
+          "thumbnailUrl": "thumbnails/lats1.jpg"
         },
         {
           "id": "l-2",
           "title": "Lat Pulldown 1",
-          "videoUrl": "./videos/Lats/lats1.mp4",
-          "thumbnailUrl": "./thumbnails/lats1.jpg"
+          "videoUrl": "videos/Lats/lats1.mp4",
+          "thumbnailUrl": "thumbnails/lats1.jpg"
         },
         {
           "id": "l-3",
           "title": "Seated Row",
-          "videoUrl": "./videos/Lats/lats2-seatedrow.mp4",
-          "thumbnailUrl": "./thumbnails/lats2-seatedrow.jpg"
+          "videoUrl": "videos/Lats/lats2-seatedrow.mp4",
+          "thumbnailUrl": "thumbnails/lats2-seatedrow.jpg"
         },
         {
           "id": "l-4",
           "title": "Full Lat Workout",
-          "videoUrl": "./videos/Lats/lats3-full.mp4",
-          "thumbnailUrl": "./thumbnails/lats3-full.jpg"
+          "videoUrl": "videos/Lats/lats3-full.mp4",
+          "thumbnailUrl": "thumbnails/lats3-full.jpg"
         },
         {
           "id": "l-5",
           "title": "Seated Row Variation",
-          "videoUrl": "./videos/Lats/lats4-seatedrow2.mp4",
-          "thumbnailUrl": "./thumbnails/lats4-seatedrow2.jpg"
+          "videoUrl": "videos/Lats/lats4-seatedrow2.mp4",
+          "thumbnailUrl": "thumbnails/lats4-seatedrow2.jpg"
         }
       ]
     },
@@ -108,18 +108,18 @@
       "id": "shoulder",
       "name": "Shoulder",
       "description": "Build broad and powerful shoulders.",
-      "image": "./thumbnails/shrugs.jpg",
+      "image": "thumbnails/shrugs.jpg",
       "videos": [
         {
           "id": "s-1",
           "title": "Shrugs",
-          "videoUrl": "./videos/Shoulder/Shrugs.mp4",
-          "thumbnailUrl": "./thumbnails/shrugs.jpg"
+          "videoUrl": "videos/Shoulder/Shrugs.mp4",
+          "thumbnailUrl": "thumbnails/shrugs.jpg"
         },
         {
           "id": "s-2",
           "title": "Dumbbell Shoulder Press",
-          "videoUrl": "./videos/Shoulder/shoulder-dumbell.mp4",
+          "videoUrl": "videos/Shoulder/shoulder-dumbell.mp4",
           "thumbnailUrl": ""
         }
       ]

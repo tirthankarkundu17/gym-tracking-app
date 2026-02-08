@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import videoData from '../data/videos.json';
+import { getAssetUrl } from '../utils/assetUtils';
 
 const LandingPage = () => {
     return (
@@ -10,7 +11,7 @@ const LandingPage = () => {
                     <Link key={category.id} to={`/category/${category.id}`} style={{ textDecoration: 'none' }}>
                         <div className="card">
                             {category.image ? (
-                                <img src={category.image} alt={category.name} />
+                                <img src={getAssetUrl(category.image)} alt={category.name} />
                             ) : (
                                 <div style={{ height: '200px', background: 'var(--bg-surface-hover)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     <span>No Image</span>
