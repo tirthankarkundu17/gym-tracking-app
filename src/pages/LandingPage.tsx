@@ -12,7 +12,7 @@ const LandingPage = () => {
                             {category.image ? (
                                 <img src={category.image} alt={category.name} />
                             ) : (
-                                <div style={{ height: '200px', background: '#334155', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <div style={{ height: '200px', background: 'var(--bg-surface-hover)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     <span>No Image</span>
                                 </div>
                             )}

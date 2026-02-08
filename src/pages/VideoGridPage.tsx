@@ -10,9 +10,9 @@ const VideoGridPage = () => {
 
     useEffect(() => {
         if (!category) {
-            // Create a timer to redirect back or just show message
+            // handle error if needed
         }
-    }, [category, navigate]);
+    }, [category]);
 
     if (!category) {
         return (
@@ -32,26 +32,55 @@ const VideoGridPage = () => {
                 <h1 style={{ margin: 0, fontSize: '2.5rem', textAlign: 'right' }}>{category.name.toUpperCase()}</h1>
             </div>
 
-            <div className="grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))' }}>
+            <div className="grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' }}>
                 {category.videos.map((video) => (
-                    <div key={video.id} className="card" style={{ cursor: 'default', padding: '1.5rem' }}>
-                        <video
-                            controls
-                            width="100%"
-                            poster={video.thumbnailUrl || undefined}
-                            preload="metadata"
-                            style={{ borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)', backgroundColor: '#000' }}
-                        >
-                            <source src={video.videoUrl} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div className="video-title">{video.title}</div>
+                    <div
+                        key={video.id}
+                        className="card video-card"
+                        onClick={() => navigate(`/watch/${video.id}`)}
+                        style={{ padding: '1rem', cursor: 'pointer' }}
+                    >
+                        <div style={{ position: 'relative', width: '100%', height: '220px', borderRadius: '8px', overflow: 'hidden', backgroundColor: 'var(--bg-surface)' }}>
+                            {video.thumbnailUrl ? (
+                                <img
+                                    src={video.thumbnailUrl}
+                                    alt={video.title}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                        opacity: 0.9,
+                                        transition: 'transform 0.3s'
+                                    }}
+                                />
+                            ) : (
+                                <div style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    background: 'var(--video-placeholder-bg)'
+                                }}>
+                                    <span style={{ fontSize: '3rem', opacity: 0.5 }}>🎬</span>
+                                </div>
+                            )}
+
+                            {/* Play Overlay */}
+                            <div className="play-overlay">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div className="video-title" style={{ marginTop: '1rem', marginBottom: '0.2rem' }}>{video.title}</div>
                     </div>
                 ))}
             </div>
 
             {category.videos.length === 0 && (
-                <div style={{ textAlign: 'center', color: '#94a3b8', marginTop: '3rem' }}>
+                <div style={{ textAlign: 'center', color: 'var(--text-muted)', marginTop: '3rem' }}>
                     No videos available for this category yet.
                 </div>
             )}
