@@ -1,73 +1,99 @@
-# React + TypeScript + Vite
+# Gym Exercises App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web application for browsing and watching gym exercise videos. Built with React, TypeScript, and Vite, this app acts as a personal workout companion, allowing users to easily access video tutorials for various muscle groups directly from their mobile devices.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Categorized Workouts**: Browse exercises by muscle group (Biceps/Triceps, Chest, Lats, Shoulders, Cardio).
+- **Video Playback**: High-quality video demonstrations for each exercise.
+- **Mobile-First Design**: Optimized layout and interactions for seamless use on smartphones during workouts.
+- **Theme Support**: Toggle between Light and Dark modes for comfortable viewing in any environment.
+- **Responsive Navigation**: Smooth transitions and intuitive navigation between categories and videos.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Frontend**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router v7](https://reactrouter.com/)
+- **Styling**: Vanilla CSS with CSS Variables for theming
+- **Linting**: ESLint
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Follow these steps to set up the project locally on your machine.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- [npm](https://www.npmjs.com/) (usually comes with Node.js)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/tirthankarkundu17/gym-exercises.git
+    cd gym-app
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Open your browser and navigate to `http://localhost:5173/gym-tracking-app/` (or the port shown in your terminal).
+
+## 🏗️ Building for Production
+
+To create a production-ready build:
+
+```bash
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will generate the static files in the `dist` directory, ready for deployment.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To preview the production build locally:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run preview
 ```
+
+## 📂 Project Structure
+
+```
+src/
+├── assets/         # Images and other static assets
+├── components/     # Reusable UI components (ThemeToggle, ScrollToTop, etc.)
+├── context/        # React Context (e.g., ThemeContext)
+├── data/           # Data files (videos.json containing exercise data)
+├── pages/          # Application pages (LandingPage, VideoGridPage, WatchPage)
+├── utils/          # Utility functions (asset helpers)
+├── App.tsx         # Main application component and routing setup
+└── main.tsx        # Application entry point
+```
+
+## 🌐 Deployment
+
+This application is configured for deployment on **GitHub Pages**.
+
+The `base` path is set to `/gym-tracking-app/` in `vite.config.ts` and `App.tsx` to ensure correct routing on the hosted environment.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to calculate a Pull Request.
+
+1.  Fork the project
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
